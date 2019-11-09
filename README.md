@@ -8,3 +8,4 @@ Jasmine
 alios_terminal_test
 alios test again
 123
+test again
