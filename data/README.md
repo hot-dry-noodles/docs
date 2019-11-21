@@ -18,11 +18,9 @@
 
 使用csv格式存储, encoding:utf-8
 
+![Line1](../docs/assets/Line1.png)
 
-
-<img src="C:\Users\hyf98\AppData\Roaming\Typora\typora-user-images\image-20191118160921037.png" alt="image-20191118160921037"  />
-
-上图为Line1.csv,即1号线数据
+上图为``Line1.csv`即1号线数据
 
 其中, A-J列为平时的数据, K-T为周六周日的数据, 二者的区别只有首尾班车时间.
 
