@@ -1,11 +1,18 @@
-# wuhan-metro
-Documented by Markdown files.
-Auto built by Travis CI
-liqiyan daociyiyou
-liqiyan again
-huangyifeng test
-Jasmine
-alios_terminal_test
-alios test again
-123
-test again
+# Metro
+
+本项目旨在开发一个武汉地铁运营模拟系统。该系统由面向管理员的管理员系统和面向用户的购票系统构成。
+
+- 管理员系统：
+  - 自动调度
+  - 增加地铁线路
+  - 增开地铁和关闭/恢复地铁站或关闭/恢复线路
+- 购票系统：
+  - 选择路线
+  - 选择站点
+  - 选择购票数量
+  - 付款功能
+
+
+除此之外，我们还将考虑系统的安全性、易用性和可靠性，致力于实现一个界面简洁直观、后台安全可靠的地铁系统。
+
+![map](docs\assets\map.png)
