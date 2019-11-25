@@ -15,4 +15,4 @@
 
 除此之外，我们还将考虑系统的安全性、易用性和可靠性，致力于实现一个界面简洁直观、后台安全可靠的地铁系统。
 
-![map](docs\assets\map.png)
+![map](docs/assets/map.png)
