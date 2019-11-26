@@ -25,6 +25,11 @@ h2 {
 h3, h4 {
   font-weight: 300; }
 
+ .d1{
+ 	padding-top: 11px;
+ }
+
+
 .large {
   font-size: 2em; }
 
@@ -84,7 +89,8 @@ input.form-control {
 
 .navbar-header .navbar-brand {
   color: #fff;
-  font-size: 20px;
+  letter-spacing: 0.04em;
+  font-size: 24px;
   text-transform: uppercase;
   font-weight: 500;
   height: 60px;
@@ -411,7 +417,7 @@ a.label:hover, a.label:focus {
   border-top: 1px solid #e9ecf2; }
 
 .panel-widget {
-  padding: 10px 0;
+  padding: 0px 0;
   position: relative;
   box-shadow: none;
   border-radius: 0;
