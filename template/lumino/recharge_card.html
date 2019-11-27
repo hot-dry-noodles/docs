@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>	Wuhan - Metro</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/datepicker3.css" rel="stylesheet">
+	<link href="css/styles.css" rel="stylesheet">
+	
+	<!--Custom Font-->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+	<!--[if lt IE 9]>
+	<script src="js/html5shiv.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<!--Navigation-->
+	<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#"><span>武汉</span>地铁</a>
+				<div class="d1"><img src="images/logo6.png"  alt="Metro Map" /></div>
+              
+			</div>
+				
+		</div>
+	</nav>
+
+
+      <!--sidebar-->
+      <div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
+            <!--login-->
+            <div class="profile-sidebar">
+                <div class="profile-userpic">
+                    <img src="http://placehold.it/50/30a5ff/fff" class="img-responsive" alt="">
+                </div>
+                <div class="profile-usertitle">
+                    <div class="profile-usertitle-name">管理员/乘客</div>
+                    <div class="profile-usertitle-status"><span class="indicator label-success"></span>Online</div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="divider"></div>
+    
+            
+             <!--武汉通购买-->
+             <div class="panel panel-container col-md-12">
+                                   
+                <div class="form-group">
+                    <label>卡号</label>
+                    <input class="form-control" placeholder="15511551">    
+                </div>
+
+                <div class="form-group">
+                    <label>金额</label>
+                    <input class="form-control" placeholder="0">
+                </div>
+
+           
+            </div>
+     
+            <div class="divider"></div>
+                   
+            <ul class="nav menu">
+                <li><a href="index.html"><em class="fa fa-dashboard">&nbsp;</em> 确认充值</a></li>
+                <li><a href="buy_card.html"><em class="fa fa-calendar">&nbsp;</em> 武汉通购买</a></li>
+                <li><a href="index.html"><em class="fa fa-bar-chart">&nbsp;</em> 购票</a></li>
+            </ul>
+    
+    
+        </div><!--/.sidebar-->
+
+    <!--banner-->
+    <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+        <div class="row">
+            <ol class="breadcrumb">
+                <li><a href="index.html">
+                    <em class="fa fa-home"></em>
+                </a></li>
+                <li class="active">武汉通充值</li>
+            </ol>
+        </div><!--/.row-->
+        
+        <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <div class="panel-heading">充值记录</div>
+            
+            <!-- Table -->
+            <table class="table">
+                <thead>
+                    <tr>
+                    <th>#ID</th>
+                    <th>卡号</th>
+                    <th>充值类型</th>
+                    <th>金额(元)</th>
+                    <th>时间</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>88888888</td>
+                        <td>支付宝充值</td>
+                        <td>50</td>
+                        <td>2019-11-27 20:48:54</td>
+                    </tr>
+                    <tr>
+    
+                        <td>2</td>
+                        <td>88888888</td>
+                        <td>微信充值</td>
+                        <td>50</td>
+                        <td>2019-11-27 20:49:54</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>88888888</td>
+                        <td>现金充值</td>
+                        <td>50</td>
+                        <td>2019-11-27 20:50:54</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="panel panel-default">
+                <!-- Default panel contents -->
+                <div class="panel-heading">近期流水</div>
+                
+                <!-- Table -->
+                <table class="table">
+                    <thead>
+                        <tr>
+                        <th>#ID</th>
+                        <th>卡号</th>
+                        <th>起点</th>
+                        <th>终点</th>
+                        <th>金额(元)</th>
+                        <th>时间</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>88888888</td>
+                            <td>街道口</td>
+                            <td>洪山广场</td>
+                            <td>3</td>
+                            <td>2019-11-27 20:48:54</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>88888888</td>
+                            <td>街道口</td>
+                            <td>洪山广场</td>
+                            <td>3</td>
+                            <td>2019-11-27 20:48:54</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>88888888</td>
+                            <td>街道口</td>
+                            <td>洪山广场</td>
+                            <td>3</td>
+                            <td>2019-11-27 20:48:54</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+
+        </div><!--/.main-->
+        
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/chart.min.js"></script>
+        <script src="js/chart-data.js"></script>
+        <script src="js/easypiechart.js"></script>
+        <script src="js/easypiechart-data.js"></script>
+        <script src="js/bootstrap-datepicker.js"></script>
+        <script src="js/custom.js"></script>
+	
+		
+</body>
+</html>
