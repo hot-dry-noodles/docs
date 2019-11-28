@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Wuhan - Metro</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/datepicker3.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!--Custom Font-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <!--[if lt IE 9]>
+	<script src="js/html5shiv.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+    <!--Navigation-->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#"><span>武汉</span>地铁</a>
+                <div class="d1"><img src="images/logo6.png" alt="Metro Map" /></div>
+
+            </div>
+
+        </div>
+    </nav>
+
+
+    <!--sidebar-->
+    <div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
+        <!--login-->
+        <div class="profile-sidebar">
+            <div class="profile-userpic">
+                <img src="http://placehold.it/50/30a5ff/fff" class="img-responsive" alt="">
+            </div>
+            <div class="profile-usertitle">
+                <div class="profile-usertitle-name">管理员/乘客</div>
+                <div class="profile-usertitle-status"><span class="indicator label-success"></span>Online</div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="divider"></div>
+
+
+        <!--武汉通购买-->
+        <!-- <div class="panel panel-container col-md-12">
+
+            <div class="form-group">
+                <label>种类</label>
+                <select class="form-control">
+                    <option>租用版(蓝)</option>
+                    <option>租用版(绿)</option>
+                    <option>红色华诞</option>
+                    <option>虎年纪念</option>
+                    <option>兔年纪念</option>
+                    <option>龙年纪念</option>
+                    <option>蛇年纪念</option>
+                    <option>马年纪念</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>单价</label>
+                <input class="form-control" placeholder="20">
+            </div>
+
+
+        </div> -->
+
+        <!--购买数量和总价-->
+        <!-- <div class="panel panel-container ">
+            <div class="row">
+
+                <div class="col-md-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            购买
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-3 col-md-3 col-lg-3 no-padding">
+                    <div class="panel panel-teal panel-widget border-right">
+                        <div class="row no-padding">
+                            <div class="medium">1</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-3 col-md-3 col-lg-3 no-padding">
+                    <div class="panel panel-teal panel-widget border-right">
+                        <div class="row no-padding">
+                            <div class="medium">2</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-3 col-md-3 col-lg-3 no-padding">
+                    <div class="panel panel-teal panel-widget border-right">
+                        <div class="row no-padding">
+                            <div class="medium">3</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-3 col-md-3 col-lg-3 no-padding">
+                    <div class="panel panel-teal panel-widget border-right">
+                        <div class="row no-padding">
+                            <div class="medium">4</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-3 col-md-3 col-lg-3 no-padding">
+                    <div class="panel panel-teal panel-widget border-right">
+                        <div class="row no-padding">
+                            <div class="medium">5</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-3 col-md-3 col-lg-3 no-padding">
+                    <div class="panel panel-teal panel-widget border-right">
+                        <div class="row no-padding">
+                            <div class="medium">6</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-3 col-md-3 col-lg-3 no-padding">
+                    <div class="panel panel-teal panel-widget border-right">
+                        <div class="row no-padding">
+                            <div class="medium">7</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-3 col-md-3 col-lg-3 no-padding">
+                    <div class="panel panel-teal panel-widget border-right">
+                        <div class="row no-padding">
+                            <div class="medium">8</div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="form-group col-md-12">
+                <label>总价</label>
+                <input class="form-control" placeholder="20">
+            </div>
+            <div class="divider"></div>
+        </div> -->
+
+        <ul class="nav menu">
+            <li><a href="index.html"><em class="fa fa-dashboard">&nbsp;</em> 主页 </a></li>
+            <li><a href="recharge_card.html"><em class="fa fa-calendar">&nbsp;</em> 武汉通充值</a></li>
+            <!-- <li><a href="index.html"><em class="fa fa-bar-chart">&nbsp;</em> 购票</a></li> -->
+        </ul>
+
+
+    </div>
+    <!--/.sidebar-->
+
+    <!--banner-->
+    <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+
+        <div class="row">
+            <ol class="breadcrumb">
+                <li>
+                    <a href="index.html">
+                        <em class="fa fa-home"></em>
+                    </a>
+                </li>
+                <li class="active">购票</li>
+            </ol>
+        </div>
+        <!--/.row-->
+
+
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">线路
+
+
+                    </div>
+
+                    <!-- <div class="panel-body tabs">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#tab1" data-toggle="tab">蓝色版</a></li>
+                            <li><a href="#tab2" data-toggle="tab">绿色版</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane fade in active" id="tab1">
+                                <img src="images/card_blue.jpg" alt="武汉通租用版(蓝色)"> </img>
+                            </div>
+                            <div class="tab-pane fade" id="tab2">
+                                <img src="images/card_green.jpg" alt="武汉通租用版(绿色)"> </img>
+                            </div>
+
+                        </div>
+                    </div> -->
+                </div>
+                <!--/.panel-->
+            </div>
+            <!--/.col-->
+
+        </div>
+        <!-- /.row -->
+
+        <div class="row">
+            <div class="col-md-9">
+                <div class="panel panel-default">
+                    <div class="panel-heading">武汉通纪念卡</div>
+                    <!-- <div class="panel-body tabs">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#souvenir_tab1" data-toggle="tab">红色华诞</a></li>
+                            <li><a href="#souvenir_tab2" data-toggle="tab">虎年纪念</a></li>
+                            <li><a href="#souvenir_tab3" data-toggle="tab">兔年纪念</a></li>
+                            <li><a href="#souvenir_tab4" data-toggle="tab">龙年纪念</a></li>
+                            <li><a href="#souvenir_tab5" data-toggle="tab">蛇年纪念</a></li>
+                            <li><a href="#souvenir_tab6" data-toggle="tab">马年纪念</a></li>
+
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane fade in active" id="souvenir_tab1">
+                                <img width="100%" src="images/card_cpc.jpg" alt="红色华诞"> </img>
+                            </div>
+                            <div class="tab-pane fade" id="souvenir_tab2">
+                                <img width="100%" src="images/card_tiger.jpg" alt="虎年纪念"> </img>
+                            </div>
+                            <div class="tab-pane fade" id="souvenir_tab3">
+                                <img width="100%" src="images/card_rabbit.jpg" alt="兔年纪念"> </img>
+                            </div>
+                            <div class="tab-pane fade" id="souvenir_tab4">
+                                <img width="100%" src="images/card_dragon.jpg" alt="龙年纪念"> </img>
+                            </div>
+                            <div class="tab-pane fade" id="souvenir_tab5">
+                                <img width="100%" src="images/card_snake.jpg" alt="蛇年纪念"> </img>
+                            </div>
+                            <div class="tab-pane fade" id="souvenir_tab6">
+                                <img width="100%" src="images/card_horse.jpg" alt="马年纪念"> </img>
+                            </div>
+
+                        </div>
+                    </div> -->
+                </div>
+                <!--/.panel-->
+            </div>
+            <!--/.col-->
+
+        </div>
+        <!-- /.row -->
+
+
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>常见问题</h2>
+            </div>
+            <div class="col-md-12">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">使用说明</div>
+                    <div class="panel-body">
+                        <p>武汉通属于不记名卡, 不可挂失, 需要自行妥善保管. 因卡片丢失所造成的损失自行承担; 售价因卡的种类而异, 租用卡可按规定退余额.</p>
+                    </div>
+                </div>
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">使用区域</div>
+                    <div class="panel-body">
+
+                        <div class="col-xs-1 col-md-1 col-lg-1 no-padding">
+                            <div class="panel panel-teal panel-widget border-right">
+                                <div class="row no-padding">
+                                    <div class="medium">武汉</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-1 col-md-1 col-lg-1 no-padding">
+                            <div class="panel panel-teal panel-widget border-right">
+                                <div class="row no-padding">
+                                    <div class="medium">汉川</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-1 col-md-1 col-lg-1 no-padding">
+                            <div class="panel panel-teal panel-widget border-right">
+                                <div class="row no-padding">
+                                    <div class="medium">鄂州</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-1 col-md-1 col-lg-1 no-padding">
+                            <div class="panel panel-teal panel-widget border-right">
+                                <div class="row no-padding">
+                                    <div class="medium">孝感</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-1 col-md-1 col-lg-1 no-padding">
+                            <div class="panel panel-teal panel-widget border-right">
+                                <div class="row no-padding">
+                                    <div class="medium">仙桃</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-1 col-md-1 col-lg-1 no-padding">
+                            <div class="panel panel-teal panel-widget border-right">
+                                <div class="row no-padding">
+                                    <div class="medium">应城</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-1 col-md-1 col-lg-1 no-padding">
+                            <div class="panel panel-teal panel-widget border-right">
+                                <div class="row no-padding">
+                                    <div class="medium">安陆</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-1 col-md-1 col-lg-1 no-padding">
+                            <div class="panel panel-teal panel-widget border-right">
+                                <div class="row no-padding">
+                                    <div class="medium">大冶</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="panel panel-primary">
+                    <div class="panel-heading">退卡说明</div>
+                    <div class="panel-body">
+                        <p>租用卡:该卡购卡时押金20元, 顾客如有需要可至武汉通客服点退卡.退卡时, 如卡表面完好, 将从押金中扣除每月0.4元的押金(不满一个月按一个月算), 使用不满一年加收2元手续费, 剩余押金和余额可当场退还顾客; 如卡表面弯折或裂口, 则押金不退, 只退卡内余额.
+                        </p>
+                        <p>销售类卡:该卡购卡时费用为工本费, 无法退卡.普通销售卡工本费20元, 纪念卡工本费30元起.</p>
+                        <p>若武汉通卡片损坏, 卡内余额信息无法读出, 需通过武汉通后台数据库卡帐户中读取.因为武汉通的刷卡消费是脱机进行的, 不同于银行刷卡的联机交易, 消费数据和余额不能实时传送, 所有消费数据必须经过采集、清算无误、系统核实后才能确定卡内余额, 一般周期需要7天.不便之处敬请谅解.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- /.row -->
+
+
+
+
+    </div>
+    <!--/.main-->
+
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/chart.min.js"></script>
+    <script src="js/chart-data.js"></script>
+    <script src="js/easypiechart.js"></script>
+    <script src="js/easypiechart-data.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/custom.js"></script>
+
+
+</body>
+
+</html>
