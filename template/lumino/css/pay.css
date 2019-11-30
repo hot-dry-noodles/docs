@@ -1,19 +1,48 @@
-.pay {
-    position: absolute;
-    max-width: 50rem;
-    z-index: 3;
-    align-items: center;
-    /* left: 20rem; */
-    margin:0 auto;
+/***** Modal *****/
+
+.modal-content {
+	-moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;
+	border: 0;
+	text-align: left;
 }
 
-.pay article{
-    position: relative;
-    width: 30rem;
-    max-width: 100%;
-    background-color: rgba(0,255,255, 0.85);
-    border-radius: 4px;
-    padding: 3.5rem,2rem,0.5rem,2rem;
-    align-items: center;
-    vertical-align: baseline;
+.modal-header {
+	padding: 25px 25px 15px 25px;
+	background: #fff;
+	border: 0;
+	border-bottom: 1px solid #ddd;
+	-moz-border-radius: 4px 4px 0 0; -webkit-border-radius: 4px 4px 0 0; border-radius: 4px 4px 0 0;
+}
+
+.modal-header .close {
+	font-size: 36px;
+	color: #888;
+	font-weight: 300;
+	text-shadow: none;
+	opacity: 1;
+}
+
+.modal-title {
+	margin-bottom: 10px;
+	line-height: 30px;
+}
+
+.modal-body {
+	padding: 25px 25px 30px 25px;
+	background: #eee;
+	text-align: left;
+	-moz-border-radius: 0 0 4px 4px; -webkit-border-radius: 0 0 4px 4px; border-radius: 0 0 4px 4px;
+}
+
+.modal-body img {
+    /* margin-bottom: 15px; */
+    margin: 0;
+}
+
+.modal-body form textarea {
+	height: 100px;
+}
+
+.modal-body form .input-error {
+	border-color: #fd625e;
 }

@@ -63,10 +63,10 @@
 
     <!--banner-->
     <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
-        <center>
-            <!-- <div class="pay"><article align="center"><img src="images/pay.png"></article></div> -->
 
-        </center>
+        <!-- <div class="pay"><article align="center"><img src="images/pay.png"></article></div> -->
+
+
         <div class="row">
             <ol class="breadcrumb">
                 <li>
@@ -108,19 +108,19 @@
                         </div>
 
                         <div class="col-md-12" style="margin-top: -4em;margin-bottom: 2em;align-items: center;">
-                                <div class="col-md-3" style="text-align: center;">
-                                    <h4><b>街道口</b></h4>
-                                </div>
-                                <div class="col-md-3" style="text-align: center;">
-                                    <h4><b>中南路</b></h4>
-                                </div>
-                                <div class="col-md-3" style="text-align: center;">
-                                    <h4><b>王家湾</b></h4>
-                                </div>
-                                <div class="col-md-3" style="text-align: center;">
-                                    <h4><b>体育中心</b></h4>
-                                </div>
+                            <div class="col-md-3" style="text-align: center;">
+                                <h4><b>街道口</b></h4>
                             </div>
+                            <div class="col-md-3" style="text-align: center;">
+                                <h4><b>中南路</b></h4>
+                            </div>
+                            <div class="col-md-3" style="text-align: center;">
+                                <h4><b>王家湾</b></h4>
+                            </div>
+                            <div class="col-md-3" style="text-align: center;">
+                                <h4><b>体育中心</b></h4>
+                            </div>
+                        </div>
 
                         <div class="col-md-12" style="margin-top: 3em;">
                             <div class="col-md-4">
@@ -163,7 +163,8 @@
                 <div class="panel panel-default">
                     <div class="panel-body">
                         <div align="center">
-                            <button class="btn btn-md btn-primary" onclick="box()">扫码支付</button>
+                            <!-- <button class="btn btn-md btn-primary" data-modal-id="modal-register">扫码支付</button>-->
+                            <a class="btn btn-md btn-primary" href="#" data-toggle="modal" data-target="#modal-register">扫码支付</a> 
                         </div>
 
                     </div>
@@ -174,32 +175,80 @@
 
         </div>
         <!-- /.row -->
+    </div>
+    <!--/.main-->
 
-        <!--/.main-->
+    <!--box modal-->
+    <div class="modal fade" id="modal-register" tabindex="-1" role="dialog" aria-labelledby="modal-register-label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                    </button>
+                    <h3 class="modal-title" id="modal-register-label">支付</h3>
 
+                </div>
+                
 
+                <div class="modal-body">
+                    
+                    <!-- <form role="form" action="" method="post" class="registration-form">
+                        <div class="form-group">
+                            <label class="sr-only" for="form-first-name">First name</label>
+                            <input type="text" name="form-first-name" placeholder="First name..." class="form-first-name form-control" id="form-first-name">
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only" for="form-last-name">Last name</label>
+                            <input type="text" name="form-last-name" placeholder="Last name..." class="form-last-name form-control" id="form-last-name">
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only" for="form-email">Email</label>
+                            <input type="text" name="form-email" placeholder="Email..." class="form-email form-control" id="form-email">
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only" for="form-about-yourself">About yourself</label>
+                            <textarea name="form-about-yourself" placeholder="About yourself..." 
+                                        class="form-about-yourself form-control" id="form-about-yourself"></textarea>
+                        </div>
+                        <button type="submit" class="btn">Sign me up!</button>
+                    </form> -->
+                    <!-- <img src="images/alipay.png" width="100%" >
+                    <img src="images/alipay.png" width="100%" > -->
+                    <div style="overflow: hidden;">
+                        <div class="col-md-6"><img src="images/alipay.png" width="100%" ></div>
+                        <div class="col-md-6"><img src="images/weixin.png" width="100%"></div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
 
-        <script src="js/jquery-1.11.1.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/easypiechart.js"></script>
-        <script src="js/easypiechart-data.js"></script>
-        <script src="js/bootstrap-datepicker.js"></script>
-        <script src="js/custom.js"></script>
-        <script src="js/box.js"></script>
-        <script src="js/pay_drawline.js"></script>
-        <script src="js/pay_drawline_data.js"></script> 
-        <script>
-            window.onload = function () {
-                var chart1 = document.getElementById("line-chart").getContext("2d");
-                window.myLine = new Chart(chart1).Line(lineChartData, {
-                    responsive: true,
-                    scaleLineColor: "rgba(0,0,0,0)",
-                    scaleGridLineColor: "rgba(0,0,0,0)",
-                    //scaleFontColor: "#c5c7cc"
-                    scaleFontColor: "#FFF"
-                });
-            };
-        </script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/easypiechart.js"></script>
+    <script src="js/easypiechart-data.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/box.js"></script>
+    <script src="js/pay_drawline.js"></script>
+    <script src="js/pay_drawline_data.js"></script>
+    <!-- <script src="js/pay_modal.js"></script> -->
+    <script>
+        window.onload = function () {
+            var chart1 = document.getElementById("line-chart").getContext("2d");
+            window.myLine = new Chart(chart1).Line(lineChartData, {
+                responsive: true,
+                scaleLineColor: "rgba(0,0,0,0)",
+                scaleGridLineColor: "rgba(0,0,0,0)",
+                //scaleFontColor: "#c5c7cc"
+                scaleFontColor: "#FFF"
+            });
+        };
+    </script>
 
 </body>
 
