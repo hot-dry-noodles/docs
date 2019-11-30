@@ -355,7 +355,7 @@ def calPrice(distance):
 	elif 24 < distance <= 40:
 		return 6 + math.ceil((distance-24)/8)	# max: 8 
 	elif 40 < distance <= 50:
-		return 8 + math.ceil((distance-40)/10) # max: 9r
+		return 8 + math.ceil((distance-40)/10) # max: 9
 	elif distance > 50:
 		return 9 + math.ceil((distance-50)/20)
 
