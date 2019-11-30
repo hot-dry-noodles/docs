@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f50286ac-3c6a-45a6-b06a-b0696a83d04f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../Line1.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Line11.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Line12.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Line2.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Line3.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Line4.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Line6.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Line7.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Line8.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../README.md" afterDir="false" />
-    </list>
+    <list default="true" id="f50286ac-3c6a-45a6-b06a-b0696a83d04f" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -246,17 +235,17 @@
       <workItem from="1575045138865" duration="1339000" />
       <workItem from="1575046566837" duration="18000" />
       <workItem from="1575076897011" duration="701000" />
+      <workItem from="1575079714844" duration="35000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15800000" />
+    <option name="totallyTimeSpent" value="15835000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1381" height="885" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18792453" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19018868" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />

@@ -7,6 +7,7 @@
 #  			- the efficency of the application is only related to the operations in database 
 
 import openpyxl
+import math
 
 terminal_num = 198
 row_count = 0
@@ -57,11 +58,11 @@ codingTerminalsheet = codingTerminalwb['sheet1']
 
 
 def createList(sheet, column_num):
-    """ create the list according to the column_num """
-    clist = []
-    for i in range(sheet.max_row):
-        clist.append(sheet.cell(i + 1, column_num).value)
-    return clist
+	""" create the list according to the column_num """
+	clist = []
+	for i in range(sheet.max_row):
+		clist.append(sheet.cell(i + 1, column_num).value)
+	return clist
 
 
 # # lists of terminals in a line
@@ -259,88 +260,108 @@ def createList(sheet, column_num):
 # 5.2 cross-line distance
 
 # dijkstra
-def cLength(x, y):
-    for i in range(terminal_num * terminal_num):
-        if sheet.cell(i + 1, 1).value == x and sheet.cell(i + 1, 3).value == y:
-            return sheet.cell(i + 1, 5).value
+# def cLength(x, y):
+# 	for i in range(terminal_num * terminal_num):
+# 		if sheet.cell(i + 1, 1).value == x and sheet.cell(i + 1, 3).value == y:
+# 			return sheet.cell(i + 1, 5).value
 
 
-v_list = createList(codingTerminalsheet, 1)
-print('vlist:', v_list)
+# v_list = createList(codingTerminalsheet, 1)
+# print('vlist:', v_list)
 
-start_num = 168
-end_num = 169
+# start_num = 168
+# end_num = 169
 
-for i in range(start_num, terminal_num):
+# for i in range(start_num, terminal_num):
 
-    print('**********************************************')
-    print('ternimal-', i)
+# 	print('**********************************************')
+# 	print('ternimal-', i)
 
-    x_list = list()
-    y_list = v_list.copy()
-    d_list = [999999] * terminal_num
+# 	x_list = list()
+# 	y_list = v_list.copy()
+# 	d_list = [999999] * terminal_num
 
-    x_list.append(i)
-    y_list.remove(i)
-    d_list[i] = 0
+# 	x_list.append(i)
+# 	y_list.remove(i)
+# 	d_list[i] = 0
 
-    print('xlist:', x_list)
-    print('ylist:', y_list)
-    print('vlist:', v_list)
+# 	print('xlist:', x_list)
+# 	print('ylist:', y_list)
+# 	print('vlist:', v_list)
 
-    for y in iter(y_list):
-        if cLength(i, y) != 999999:
-            d_list[y] = cLength(i, y)
+# 	for y in iter(y_list):
+# 		if cLength(i, y) != 999999:
+# 			d_list[y] = cLength(i, y)
 
-    while y_list:
+# 	while y_list:
 
-        print('left terminal num:', len(y_list))
+# 		print('left terminal num:', len(y_list))
 
-        min_distance = 999999
-        for ty in iter(y_list):
-            if d_list[ty] < min_distance:
-                min_distance = d_list[ty]
-                y = ty
+# 		min_distance = 999999
+# 		for ty in iter(y_list):
+# 			if d_list[ty] < min_distance:
+# 				min_distance = d_list[ty]
+# 				y = ty
 
-        print(y)
+# 		print(y)
 
-        x_list.append(y)
-        y_list.remove(y)
+# 		x_list.append(y)
+# 		y_list.remove(y)
 
-        print('xlist:', x_list)
-        print('ylist:', y_list)
+# 		print('xlist:', x_list)
+# 		print('ylist:', y_list)
 
-        for w in iter(y_list):
-            if d_list[y] + cLength(y, w) < d_list[w]:
-                d_list[w] = d_list[y] + cLength(y, w)
+# 		for w in iter(y_list):
+# 			if d_list[y] + cLength(y, w) < d_list[w]:
+# 				d_list[w] = d_list[y] + cLength(y, w)
 
-    print('d_list of terminal-', i)
+# 	print('d_list of terminal-', i)
 
-    print('start filling the d_list of terminal-', i)
+# 	print('start filling the d_list of terminal-', i)
 
-    for ir in range(terminal_num * terminal_num):
-        start = sheet.cell(ir + 1, 1).value
-        end = sheet.cell(ir + 1, 3).value
-        if start == i:
-            if sheet.cell(ir + 1, 5).value > d_list[end]:
-                sheet.cell(ir + 1, 5).value = d_list[end]
+# 	for ir in range(terminal_num * terminal_num):
+# 		start = sheet.cell(ir + 1, 1).value
+# 		end = sheet.cell(ir + 1, 3).value
+# 		if start == i:
+# 			if sheet.cell(ir + 1, 5).value > d_list[end]:
+# 				sheet.cell(ir + 1, 5).value = d_list[end]
 
-    wb.save(filePath)
-    print('finish filling the d_list of terminal-', i, ':', d_list)
+# 	wb.save(filePath)
+# 	print('finish filling the d_list of terminal-', i, ':', d_list)
 
-    # debug
-    if i == end_num:
-        break
+# 	# debug
+# 	if i == end_num:
+# 		break
 
 # column 6 - route
 
-# 5.1 one-line route
+# 6.1 one-line route
 
 
-# 5.2 cross-line route
+# 6.2 cross-line route
 
 
 # column 7 - price
 
+def calPrice(distance):
+	if distance == 0:
+		return 0
+	elif 0 < distance <= 4:
+		return 2	# max: 2
+	elif 4 < distance <= 12:
+		return 2 + math.ceil((distance-4)/4)	# max: 4 
+	elif 12 < distance <= 24:
+		return 4 + math.ceil((distance-12)/6)	# max: 6
+	elif 24 < distance <= 40:
+		return 6 + math.ceil((distance-24)/8)	# max: 8 
+	elif 40 < distance <= 50:
+		return 8 + math.ceil((distance-40)/10) # max: 9r
+	elif distance > 50:
+		return 9 + math.ceil((distance-50)/20)
+
+for i in range(terminal_num * terminal_num):
+	distance = sheet.cell(i + 1, 5).value
+	sheet.cell(i + 1, 7).value = calPrice(distance)
+
 print('finished!')
-# wb.save(filePath)
+wb.save(filePath)
