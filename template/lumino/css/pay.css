@@ -1,0 +1,19 @@
+.pay {
+    position: absolute;
+    max-width: 50rem;
+    z-index: 3;
+    align-items: center;
+    /* left: 20rem; */
+    margin:0 auto;
+}
+
+.pay article{
+    position: relative;
+    width: 30rem;
+    max-width: 100%;
+    background-color: rgba(0,255,255, 0.85);
+    border-radius: 4px;
+    padding: 3.5rem,2rem,0.5rem,2rem;
+    align-items: center;
+    vertical-align: baseline;
+}
