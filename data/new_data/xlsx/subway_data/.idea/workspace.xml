@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f50286ac-3c6a-45a6-b06a-b0696a83d04f" name="Default Changelist" comment="" />
+    <list default="true" id="f50286ac-3c6a-45a6-b06a-b0696a83d04f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/calculate.py" beforeDir="false" afterPath="$PROJECT_DIR$/calculate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/distance_route_price.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/distance_route_price.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/line2.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/line2.xlsx" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,17 +16,43 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/subway_data$findtransfer.coverage" NAME="findtransfer Coverage Results" MODIFIED="1575038942647" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/subway_data$distance2.coverage" NAME="distance2 Coverage Results" MODIFIED="1575043992026" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/subway_data$route.coverage" NAME="route Coverage Results" MODIFIED="1575217304189" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/subway_data$routeformat.coverage" NAME="routeformat Coverage Results" MODIFIED="1575221188707" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/subway_data$route2.coverage" NAME="route2 Coverage Results" MODIFIED="1575042344445" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/subway_data$distance1.coverage" NAME="distance1 Coverage Results" MODIFIED="1575043997419" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/subway_data$calculate.coverage" NAME="calculate Coverage Results" MODIFIED="1575077005035" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/route.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="537">
+              <caret line="115" selection-start-line="115" selection-end-line="116" selection-end-column="17" />
+              <folding>
+                <element signature="e#25#40#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/routeformat.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-126">
+              <caret line="61" column="39" lean-forward="true" selection-start-line="61" selection-start-column="39" selection-end-line="61" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/calculate.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="332" column="13" selection-start-line="332" selection-start-column="13" selection-end-line="332" selection-end-column="13" />
+            <state relative-caret-position="-819">
+              <caret line="59" selection-start-line="59" selection-end-line="76" selection-end-column="41" />
+              <folding>
+                <element signature="e#365#380#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -47,6 +78,8 @@
         <option value="$PROJECT_DIR$/distance1.py" />
         <option value="$PROJECT_DIR$/distance2.py" />
         <option value="$PROJECT_DIR$/calculate.py" />
+        <option value="$PROJECT_DIR$/route.py" />
+        <option value="$PROJECT_DIR$/routeformat.py" />
       </list>
     </option>
   </component>
@@ -97,7 +130,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.calculate">
+  <component name="RunManager" selected="Python.routeformat">
     <configuration name="calculate" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="subway_data" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -164,7 +197,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="findtransfer" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="route" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="subway_data" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -177,7 +210,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/findtransfer.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/route.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -186,7 +219,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="route2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="routeformat" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="subway_data" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -199,7 +232,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/route2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/routeformat.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -210,11 +243,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.routeformat" />
+        <item itemvalue="Python.route" />
         <item itemvalue="Python.calculate" />
         <item itemvalue="Python.distance1" />
         <item itemvalue="Python.distance2" />
-        <item itemvalue="Python.route2" />
-        <item itemvalue="Python.findtransfer" />
       </list>
     </recent_temporary>
   </component>
@@ -236,22 +269,25 @@
       <workItem from="1575046566837" duration="18000" />
       <workItem from="1575076897011" duration="701000" />
       <workItem from="1575079714844" duration="35000" />
+      <workItem from="1575210221985" duration="7217000" />
+      <workItem from="1575218131928" duration="3041000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15835000" />
+    <option name="totallyTimeSpent" value="26093000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1381" height="885" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19018868" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1954717" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.40079364" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3989704" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32936507" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39814815" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -283,10 +319,30 @@
     <entry file="file://$PROJECT_DIR$/venv/distance1.py" />
     <entry file="file://$PROJECT_DIR$/distance2.py" />
     <entry file="file://$PROJECT_DIR$/distance1.py" />
+    <entry file="file://$PROJECT_DIR$/route.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="537">
+          <caret line="115" selection-start-line="115" selection-end-line="116" selection-end-column="17" />
+          <folding>
+            <element signature="e#25#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/calculate.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="332" column="13" selection-start-line="332" selection-start-column="13" selection-end-line="332" selection-end-column="13" />
+        <state relative-caret-position="-819">
+          <caret line="59" selection-start-line="59" selection-end-line="76" selection-end-column="41" />
+          <folding>
+            <element signature="e#365#380#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routeformat.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-126">
+          <caret line="61" column="39" lean-forward="true" selection-start-line="61" selection-start-column="39" selection-end-line="61" selection-end-column="39" />
         </state>
       </provider>
     </entry>
