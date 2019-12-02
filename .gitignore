@@ -113,6 +113,7 @@ _docpress
 __pycache__/
 *.py[cod]
 *$py.class
+*.xml
 
 # Environments
 .env
