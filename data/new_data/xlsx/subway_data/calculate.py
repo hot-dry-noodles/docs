@@ -259,6 +259,10 @@ def createList(sheet, column_num):
 
 # 5.2 cross-line distance
 
+# WARNINGS:
+# 	1. This part is sheet, please ignore!
+#	2. Time wasted here: 12 hours.
+
 # dijkstra
 def cLength(x, y):
 	for i in range(terminal_num * terminal_num):
@@ -333,15 +337,8 @@ for i in range(start_num, terminal_num):
 	if i == end_num:
 		break
 
-# column 6 - route
 
-# 6.1 one-line route
-
-
-# 6.2 cross-line route
-
-
-# column 8 - price
+# column  - price
 
 # def calPrice(distance):
 # 	if distance == 0:
