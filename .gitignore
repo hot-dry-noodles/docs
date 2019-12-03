@@ -114,6 +114,7 @@ __pycache__/
 *.py[cod]
 *$py.class
 *.xml
+*.pyc
 
 # Environments
 .env
