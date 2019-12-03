@@ -113,6 +113,8 @@ _docpress
 __pycache__/
 *.py[cod]
 *$py.class
+*.xml
+*.pyc
 
 # Environments
 .env
@@ -132,3 +134,7 @@ pip-delete-this-directory.txt
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
+
+# vscode
+.vscode
+
