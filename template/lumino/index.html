@@ -151,13 +151,13 @@
 						<!--origin station-->
 						<form role="search">
 							<div class="form-group">
-								<input type="text" class="form-control" placeholder="起点">
+								<input id="form-text-depature" type="text" class="form-control" placeholder="起点">
 							</div>
 						</form>
 						<!--destination-->
 						<form role="search">
 							<div class="form-group">
-								<input type="text" class="form-control" placeholder="终点">
+								<input id="form-text-destination" type="text" class="form-control" placeholder="终点">
 							</div>
 						</form>
 						<!--price/ticket-->
@@ -280,8 +280,14 @@
 							<l-map style="height: 600px; width: 100%" :zoom="zoom" :min-zoom="minZoom"
 								:max-zoon="maxZoom" :center="center" :crs="crs" ref="metroMap">
 								<l-image-overlay :url="url" :bounds="bounds"></l-image-overlay>
-								<l-marker v-for="star in stars" :lat-lng="star" :key="star.name">
-									<l-popup :content="star.name" />
+								<l-marker v-for="marker in markers" :lat-lng="marker" :key="marker.name">
+									<l-popup>
+										<div id="message">
+											{{ marker.name }}
+										</div>
+										<button @click="setAsDepature(marker.name)">设为起点</button>
+										<button @click="setAsDestination(marker.name)">设为终点</button>
+									</l-popup>
 								</l-marker>
 							</l-map>
 						</div>
@@ -305,11 +311,22 @@
 						url: 'images/map.jpg',
 						bounds: [[0, 0], [9653, 10528]],
 						crs: L.CRS.Simple,
-						stars: [
+						markers: [
 							{ name: 'orig', lng: 0, lat: 0 },
-							{ name: 'limit', lng: 10528, lat: 9653 }
+							{ name: 'limit', lng: 10528, lat: 9653 },
+							{ name: '天河机场', lng: 4937, lat: 8607 },
+							{ name: '航空总部', lng: 4937, lat: 8819 },
 						]
 					};
+				},
+				methods: {
+					setAsDepature(name) {
+						document.getElementById('form-text-depature').value = name;
+					},
+					setAsDestination(name) {
+						document.getElementById('form-text-destination').value = name;
+					},
+
 				},
 				components: {
 					'l-map': window.Vue2Leaflet.LMap,
@@ -323,7 +340,6 @@
 						map.setMaxBounds(this.$data.bounds);
 					})
 				}
-
 			})
 		</script>
 		<style>
