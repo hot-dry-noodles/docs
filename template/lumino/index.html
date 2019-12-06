@@ -278,7 +278,7 @@
 					<div id="map-app" class="panel-body">
 						<div class="vue-leaflet">
 							<l-map style="height: 600px; width: 100%" :zoom="zoom" :min-zoom="minZoom"
-								:max-zoon="maxZoom" :center="center" :crs="crs">
+								:max-zoon="maxZoom" :center="center" :crs="crs" ref="metroMap">
 								<l-image-overlay :url="url" :bounds="bounds"></l-image-overlay>
 								<l-marker v-for="star in stars" :lat-lng="star" :key="star.name">
 									<l-popup :content="star.name" />
@@ -298,12 +298,11 @@
 				el: '#map-app',
 				data() {
 					return {
-						zoom: -4,
+						zoom: -3,
 						minZoom: -4,
 						maxZoom: 1,
 						center: L.latLng(4826.5, 5264.0),
 						url: 'images/map.jpg',
-						bounds: [[-26.5, -25], [1021.5, 1023]],
 						bounds: [[0, 0], [9653, 10528]],
 						crs: L.CRS.Simple,
 						stars: [
@@ -317,7 +316,14 @@
 					'l-image-overlay': window.Vue2Leaflet.LImageOverlay,
 					'l-marker': window.Vue2Leaflet.LMarker,
 					'l-popup': window.Vue2Leaflet.LPopup,
+				},
+				mounted() {
+					this.$nextTick(() => {
+						const map = this.$refs.metroMap.mapObject;
+						map.setMaxBounds(this.$data.bounds);
+					})
 				}
+
 			})
 		</script>
 		<style>
