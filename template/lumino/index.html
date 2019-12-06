@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>	Wuhan - Metro</title>
+	<title> Wuhan - Metro</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/font-awesome.min.css" rel="stylesheet">
 	<link href="css/datepicker3.css" rel="stylesheet">
 	<link href="css/styles.css" rel="stylesheet">
-	
+
 	<!--Custom Font-->
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i"
+		rel="stylesheet">
 	<!--[if lt IE 9]>
 	<script src="js/html5shiv.js"></script>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
 </head>
 
 <body>
@@ -23,15 +26,15 @@
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<a class="navbar-brand" href="#"><span>武汉</span>地铁</a>
-				<div class="d1"><img src="images/logo6.png"  alt="Metro Map" /></div>
-              
+				<div class="d1"><img src="images/logo6.png" alt="Metro Map" /></div>
+
 			</div>
-				
+
 		</div>
 	</nav>
 
-    <!--banner-->
-    <div id="main" class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+	<!--banner-->
+	<div id="main" class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
 		<div class="panel panel-container">
 			<div class="row">
 				<div class="col-xs-4 col-md-2 col-lg-2 no-padding">
@@ -105,180 +108,229 @@
 						</div>
 					</div>
 				</div>
-                
-                <div class="col-xs-2 col-md-1 col-lg-1 no-padding">
+
+				<div class="col-xs-2 col-md-1 col-lg-1 no-padding">
 					<div class="panel panel-teal panel-widget border-right">
 						<div class="row no-padding">
 							<div class="h3">21号线</div>
 						</div>
 					</div>
-				</div>			
+				</div>
 			</div>
 		</div>
 
 
 
-    <!--sidebar-->
-    <div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
-    	<!--login-->
-		<div class="profile-sidebar">
-			<div class="profile-userpic">
-				<img src="http://placehold.it/50/30a5ff/fff" class="img-responsive" alt="">
+		<!--sidebar-->
+		<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
+			<!--login-->
+			<div class="profile-sidebar">
+				<div class="profile-userpic">
+					<img src="http://placehold.it/50/30a5ff/fff" class="img-responsive" alt="">
+				</div>
+				<div class="profile-usertitle">
+					<div class="profile-usertitle-name">管理员/乘客</div>
+					<div class="profile-usertitle-status"><span class="indicator label-success"></span>Online</div>
+				</div>
+				<div class="clear"></div>
 			</div>
-			<div class="profile-usertitle">
-				<div class="profile-usertitle-name">管理员/乘客</div>
-				<div class="profile-usertitle-status"><span class="indicator label-success"></span>Online</div>
+			<div class="divider"></div>
+
+
+			<!--票价查询-->
+			<div class="panel panel-container">
+				<div class="row">
+
+					<div class="col-md-12">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								票价查询
+							</div>
+						</div>
+
+						<!--origin station-->
+						<form role="search">
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="起点">
+							</div>
+						</form>
+						<!--destination-->
+						<form role="search">
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="终点">
+							</div>
+						</form>
+						<!--price/ticket-->
+						<div class="form-group">
+							<div class="col-md-3">
+								<h5>票价</h5>
+							</div>
+							<div class="col-md-9">
+								<input id="name" name="name" type="text" placeholder="元/张" class="form-control">
+							</div>
+						</div>
+
+					</div>
+				</div>
 			</div>
-			<div class="clear"></div>
+
+
+			<!--购票数量-->
+			<div class="panel panel-container">
+				<div class="row">
+
+					<div class="col-md-12">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								购票数量
+							</div>
+						</div>
+					</div>
+
+					<div class="col-xs-3 col-md-3 col-lg-3 no-padding">
+						<div class="panel panel-teal panel-widget border-right">
+							<div class="row no-padding">
+								<div class="medium">1</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-xs-3 col-md-3 col-lg-3 no-padding">
+						<div class="panel panel-teal panel-widget border-right">
+							<div class="row no-padding">
+								<div class="medium">2</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-xs-3 col-md-3 col-lg-3 no-padding">
+						<div class="panel panel-teal panel-widget border-right">
+							<div class="row no-padding">
+								<div class="medium">3</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-xs-3 col-md-3 col-lg-3 no-padding">
+						<div class="panel panel-teal panel-widget border-right">
+							<div class="row no-padding">
+								<div class="medium">4</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-xs-3 col-md-3 col-lg-3 no-padding">
+						<div class="panel panel-teal panel-widget border-right">
+							<div class="row no-padding">
+								<div class="medium">5</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-xs-3 col-md-3 col-lg-3 no-padding">
+						<div class="panel panel-teal panel-widget border-right">
+							<div class="row no-padding">
+								<div class="medium">6</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-xs-3 col-md-3 col-lg-3 no-padding">
+						<div class="panel panel-teal panel-widget border-right">
+							<div class="row no-padding">
+								<div class="medium">7</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-xs-3 col-md-3 col-lg-3 no-padding">
+						<div class="panel panel-teal panel-widget border-right">
+							<div class="row no-padding">
+								<div class="medium">8</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+
+
+			<ul class="nav menu">
+				<li><a href="pay.html"><em class="fa fa-dashboard">&nbsp;</em> 确认购票</a></li>
+				<li><a href="buy_card.html"><em class="fa fa-calendar">&nbsp;</em> 武汉通购买</a></li>
+				<li><a href="recharge_card.html"><em class="fa fa-bar-chart">&nbsp;</em> 武汉通充值</a></li>
+			</ul>
+
+
 		</div>
-        <div class="divider"></div>
-
-        
-         <!--票价查询-->
-        <div class="panel panel-container">
-			<div class="row">
-               
-				<div class="col-md-12">
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						票价查询
-					</div>	
-				</div>
-
-                <!--origin station-->
-		        <form role="search">
-		        	<div class="form-group">
-		        		<input type="text" class="form-control" placeholder="起点">
-		        	</div>
-		        </form>
-		        <!--destination-->
-		        <form role="search">
-		        	<div class="form-group">
-		        		<input type="text" class="form-control" placeholder="终点">
-		        	</div>
-		        </form>
-                <!--price/ticket-->
-                <div class="form-group">
-	            <div class="col-md-3"><h5>票价</h5></div>
-	            <div class="col-md-9">
-		            <input id="name" name="name" type="text" placeholder="元/张" class="form-control">
-	            </div>
-                </div>
-
-                </div>
-            </div>
-        </div>
-			    
-
-         <!--购票数量-->   
-        <div class="panel panel-container">
-			<div class="row">
-                
-				<div class="col-md-12">
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						购票数量
-					</div>	
-				</div>
-			    </div>
-
-                <div class="col-xs-3 col-md-3 col-lg-3 no-padding">
-					<div class="panel panel-teal panel-widget border-right">
-						<div class="row no-padding">
-							<div class="medium">1</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-xs-3 col-md-3 col-lg-3 no-padding">
-					<div class="panel panel-teal panel-widget border-right">
-						<div class="row no-padding">
-							<div class="medium">2</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-xs-3 col-md-3 col-lg-3 no-padding">
-					<div class="panel panel-teal panel-widget border-right">
-						<div class="row no-padding">
-							<div class="medium">3</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-xs-3 col-md-3 col-lg-3 no-padding">
-					<div class="panel panel-teal panel-widget border-right">
-						<div class="row no-padding">
-							<div class="medium">4</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-xs-3 col-md-3 col-lg-3 no-padding">
-					<div class="panel panel-teal panel-widget border-right">
-						<div class="row no-padding">
-							<div class="medium">5</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-xs-3 col-md-3 col-lg-3 no-padding">
-					<div class="panel panel-teal panel-widget border-right">
-						<div class="row no-padding">
-							<div class="medium">6</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-xs-3 col-md-3 col-lg-3 no-padding">
-					<div class="panel panel-teal panel-widget border-right">
-						<div class="row no-padding">
-							<div class="medium">7</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-xs-3 col-md-3 col-lg-3 no-padding">
-					<div class="panel panel-teal panel-widget border-right">
-						<div class="row no-padding">
-							<div class="medium">8</div>
-						</div>
-					</div>
-				</div>
-	    
-			</div>
-		</div>
-
-
-
-        <ul class="nav menu">
-			<li><a href="pay.html"><em class="fa fa-dashboard">&nbsp;</em> 确认购票</a></li>
-			<li><a href="buy_card.html"><em class="fa fa-calendar">&nbsp;</em> 武汉通购买</a></li>
-			<li><a href="recharge_card.html"><em class="fa fa-bar-chart">&nbsp;</em> 武汉通充值</a></li>
-		</ul>
-
-
-	</div><!--/.sidebar-->
+		<!--/.sidebar-->
 
 
 
 
-	<div class="row">
+		<div class="row">
 			<div class="col-md-12">
 				<div class="panel panel-default">
 					<div class="panel-heading">
 						地铁线路图
 					</div>
-					<div class="panel-body">
-						<img src="../../docs/assets/map.png"  alt="Metro Map" />
+					<div id="map-app" class="panel-body">
+						<div class="vue-leaflet">
+							<l-map style="height: 600px; width: 100%" :zoom="zoom" :min-zoom="minZoom"
+								:max-zoon="maxZoom" :center="center" :crs="crs">
+								<l-image-overlay :url="url" :bounds="bounds"></l-image-overlay>
+								<l-marker v-for="star in stars" :lat-lng="star" :key="star.name">
+									<l-popup :content="star.name" />
+								</l-marker>
+							</l-map>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div><!--/.row-->
+		</div>
+		<!--/.row-->
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+		<script src="https://unpkg.com/vue2-leaflet"></script>
+		<script>
+			let mapApp = new Vue({
+				el: '#map-app',
+				data() {
+					return {
+						zoom: -4,
+						minZoom: -4,
+						maxZoom: 1,
+						center: L.latLng(4826.5, 5264.0),
+						url: 'images/map.jpg',
+						bounds: [[-26.5, -25], [1021.5, 1023]],
+						bounds: [[0, 0], [9653, 10528]],
+						crs: L.CRS.Simple,
+						stars: [
+							{ name: 'orig', lng: 0, lat: 0 },
+							{ name: 'limit', lng: 10528, lat: 9653 }
+						]
+					};
+				},
+				components: {
+					'l-map': window.Vue2Leaflet.LMap,
+					'l-image-overlay': window.Vue2Leaflet.LImageOverlay,
+					'l-marker': window.Vue2Leaflet.LMarker,
+					'l-popup': window.Vue2Leaflet.LPopup,
+				}
+			})
+		</script>
+		<style>
+			#map-app {
+				position: relative;
+				/* border: 1px solid black; */
+				border-radius: 8px;
+				height: 100%;
+				width: 100%;
+			}
+		</style>
 
 
-
-	
-		
 </body>
+
 </html>
