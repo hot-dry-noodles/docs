@@ -1,9 +1,3 @@
-# teststring = '81d110d109d108d107d106d105d104d103d102d-101d48b49d100-d99d98'
-
-# _str = teststring.replace('d48b49d' ,'d48d49d')
-
-# print(_str)
-
 import openpyxl
 terminal_num = 198
 
