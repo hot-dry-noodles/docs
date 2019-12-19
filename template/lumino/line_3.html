@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Wuhan - Metro</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/datepicker3.css" rel="stylesheet">
+	<link href="css/styles.css" rel="stylesheet">
+	<link href="css/modal.css" rel="stylesheet">
+	<link href="css/form-elements.css" rel="stylesheet">
+
+	<!--Custom Font-->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i"
+		rel="stylesheet">
+	<!--[if lt IE 9]>
+	<script src="js/html5shiv.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+</head>
+
+<body>
+	<!--Navigation-->
+	<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#"><span>武汉</span>地铁</a>
+				<div class="d1"><img src="images/logo6.png" alt="Metro Map" /></div>
+
+			</div>
+
+		</div>
+	</nav>
+
+
+
+
+	
+	<div id="main" class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+		<div class="panel panel-container">
+			<div class="row">
+				<div class="col-xs-4 col-md-2 col-lg-2 no-padding">
+					<div class="panel panel-teal panel-widget border-right">
+						<div class="row no-padding">
+		<div class="h3"><a href="index.html">全部线路</a></div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-2 col-md-1 col-lg-1 no-padding">
+					<div class="panel panel-blue panel-widget border-right">
+						<div class="row no-padding">
+							<div class="h3"><a href="line_1.html">1号线</a></div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-2 col-md-1 col-lg-1 no-padding">
+					<div class="panel panel-blue panel-widget border-right">
+						<div class="row no-padding">
+							<div class="h3"><a href="line_2.html">2号线</a></div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-2 col-md-1 col-lg-1 no-padding">
+					<div class="panel panel-blue panel-widget border-right">
+						<div class="row no-padding">
+							<div class="h3"><a href="line_3.html">3号线</a></div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-2 col-md-1 col-lg-1 no-padding">
+					<div class="panel panel-blue panel-widget border-right">
+						<div class="row no-padding">
+							<div class="h3"><a href="line_4.html">4号线</a></div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-2 col-md-1 col-lg-1 no-padding">
+					<div class="panel panel-blue panel-widget border-right">
+						<div class="row no-padding">
+							<div class="h3"><a href="line_6.html">6号线</a></div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-2 col-md-1 col-lg-1 no-padding">
+					<div class="panel panel-blue panel-widget border-right">
+						<div class="row no-padding">
+							<div class="h3"><a href="line_7.html">7号线</a></div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-2 col-md-1 col-lg-1 no-padding">
+					<div class="panel panel-blue panel-widget border-right">
+						<div class="row no-padding">
+							<div class="h3"><a href="line_8.html">8号线</a></div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-2 col-md-1 col-lg-1 no-padding">
+					<div class="panel panel-blue panel-widget border-right">
+						<div class="row no-padding">
+							<div class="h3"><a href="line_11.html">11号线</a></div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-2 col-md-1 col-lg-1 no-padding">
+					<div class="panel panel-teal panel-widget border-right">
+						<div class="row no-padding">
+							<div class="h3"><a href="line_21.html">21号线</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<!--sidebar-->
+		<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
+			<!--login-->
+			<div class="profile-sidebar">
+				<div class="profile-userpic">
+					<img src="http://placehold.it/50/30a5ff/fff" class="img-responsive" alt="">
+				</div>
+				<div class="profile-usertitle">
+					<div class="profile-usertitle-name">管理员/乘客</div>
+					<div class="profile-usertitle-status"><span class="indicator label-success"></span>Online</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="divider"></div>
+
+
+			<!--票价查询-->
+			<div class="panel panel-container">
+				<div class="row">
+
+					<div class="col-md-12">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								票价查询
+							</div>
+						</div>
+
+						<!--origin station-->
+						<form role="search">
+							<div class="form-group">
+								<input id="form-text-depature" type="text" class="form-control" placeholder="起点">
+							</div>
+						</form>
+						<!--destination-->
+						<form role="search">
+							<div class="form-group">
+								<input id="form-text-destination" type="text" class="form-control" placeholder="终点">
+							</div>
+						</form>
+						<!--price/ticket-->
+						<div class="form-group">
+							<div class="col-md-3">
+								<h5>票价</h5>
+							</div>
+							<div class="col-md-9">
+								<input id="name" name="name" type="text" placeholder="元/张" class="form-control">
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+
+			<!--购票数量-->
+			<div class="panel panel-container">
+				<div class="row">
+                    <ul class="nav menu">
+					<div class="col-md-12">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								购票数量
+							</div>
+						</div>
+					</div>
+
+					<div class="d2">
+						<button >1</button>	
+					    <button >2</button>	
+				        <button >3</button>	
+				        <button >4</button>	
+					   <button >5</button>	   
+					   <button >6</button>	   
+					   <button >7</button>	   
+					   <button >8</button>	
+					</div>
+
+					</ul>
+				</div>
+			</div>
+
+
+
+			<ul class="nav menu">
+				<li><a href="pay.html"><em class="fa fa-dashboard">&nbsp;</em> 确认购票</a></li>
+				<li><a href="buy_card.html"><em class="fa fa-calendar">&nbsp;</em> 武汉通购买</a></li>
+				<li><a href="#" data-toggle="modal" data-target="#modal-recharge"><em class="fa fa-bar-chart">&nbsp;</em> 武汉通充值</a>
+			</ul>
+
+
+		</div>
+		<!--/.sidebar-->
+
+
+
+
+		<div class="row">
+			<div class="col-md-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						地铁线路图
+					</div>
+					<div id="map-app" class="panel-body">
+						<div class="vue-leaflet">
+							<l-map style="height: 600px; width: 100%" :zoom="zoom" :min-zoom="minZoom"
+								:max-zoon="maxZoom" :center="center" :crs="crs" ref="metroMap">
+								<l-image-overlay :url="url" :bounds="bounds"></l-image-overlay>
+								<l-marker v-for="marker in markers" :lat-lng="marker" :key="marker.name">
+									<l-popup>
+										<div id="message">
+											{{ marker.name }}
+										</div>
+										<button @click="setAsDepature(marker.name)">设为起点</button>
+										<button @click="setAsDestination(marker.name)">设为终点</button>
+									</l-popup>
+								</l-marker>
+							</l-map>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--/.row-->
+	</div>
+
+		<div class="modal fade" id="modal-recharge" tabindex="-1" role="dialog" aria-labelledby="modal-register-label" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">
+								<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+							</button>
+							<h3 class="modal-title" id="modal-register-label">武汉通充值</h3>
+		
+						</div>
+						
+		
+						<div class="modal-body">
+						<!-- 武汉通充值的表单部分 -->
+							<form role="form" action="" method="post" class="registration-form">
+								<div class="form-group">
+									<label for="form-card-number">卡号</label>
+									<input type="text" name="form-card-number" placeholder="8888888888" class="form-control" id="form-card-number">
+								</div>
+								<div class="form-group">
+									<label for="form-money-amount">金额</label>
+									<input type="text" name="form-money-amount" placeholder="100" class="form-last-name form-control" id="form-money-amount">
+								</div>
+								<div align="center">
+									<button type="submit" class="btn btn-md btn-primary">确定</button>
+								</div>
+							</form>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+		<script src="https://unpkg.com/vue2-leaflet"></script>
+
+		<script src="js/box.js"></script>
+		<script src="js/jquery-1.11.1.min.js"></script>
+    	<script src="js/bootstrap.min.js"></script>
+		<script>
+			L.Icon.Default.mergeOptions({
+				iconUrl: 'images/marker.svg',
+				iconRetinaUrl: 'images/marker.svg',
+				shadowUrl: 'images/marker.svg',
+				// iconSize: [38, 95],
+				// shadowSize: [50, 64],
+				// point of the icon which will correspond to marker's location
+				iconAnchor: [0, -1],
+				// shadowAnchor: [4, 62],
+				// point from which the popup should open relative to the iconAnchor
+				popupAnchor: [0, -5],
+			});
+			let mapApp = new Vue({
+				el: '#map-app',
+				data() {
+					return {
+						zoom: -1,
+						minZoom: -1,
+						maxZoom: -1,
+						center: L.latLng(600, 1275),
+						url: 'images/line_UI_png/line3.png',
+						bounds: [[0, 0], [1200, 2550]],
+						crs: L.CRS.Simple,
+						markers: [
+							{ name: 'orig', lng: 0, lat: 0 },
+							
+						]
+					};
+				},
+				methods: {
+					setAsDepature(name) {
+						document.getElementById('form-text-depature').value = name;
+					},
+					setAsDestination(name) {
+						document.getElementById('form-text-destination').value = name;
+					},
+
+				},
+				components: {
+					'l-map': window.Vue2Leaflet.LMap,
+					'l-image-overlay': window.Vue2Leaflet.LImageOverlay,
+					'l-marker': window.Vue2Leaflet.LMarker,
+					'l-popup': window.Vue2Leaflet.LPopup,
+				},
+				mounted() {
+					this.$nextTick(() => {
+						const map = this.$refs.metroMap.mapObject;
+						map.setMaxBounds(this.$data.bounds);
+					})
+				}
+			})
+		</script>
+		<style>
+			#map-app {
+				position: relative;
+				/* border: 1px solid black; */
+				border-radius: 8px;
+				height: 100%;
+				width: 100%;
+			}
+		</style>
+
+
+</body>
+
+</html>
