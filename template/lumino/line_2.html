@@ -38,14 +38,14 @@
 
 
 
-	
+
 	<div id="main" class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
 		<div class="panel panel-container">
 			<div class="row">
 				<div class="col-xs-4 col-md-2 col-lg-2 no-padding">
 					<div class="panel panel-teal panel-widget border-right">
 						<div class="row no-padding">
-		<div class="h3"><a href="index.html">全部线路</a></div>
+							<div class="h3"><a href="index.html">全部线路</a></div>
 						</div>
 					</div>
 				</div>
@@ -174,25 +174,25 @@
 			<!--购票数量-->
 			<div class="panel panel-container">
 				<div class="row">
-                    <ul class="nav menu">
-					<div class="col-md-12">
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								购票数量
+					<ul class="nav menu">
+						<div class="col-md-12">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									购票数量
+								</div>
 							</div>
 						</div>
-					</div>
 
-					<div class="d2">
-						<button >1</button>	
-					    <button >2</button>	
-				        <button >3</button>	
-				        <button >4</button>	
-					   <button >5</button>	   
-					   <button >6</button>	   
-					   <button >7</button>	   
-					   <button >8</button>	
-					</div>
+						<div class="d2">
+							<button>1</button>
+							<button>2</button>
+							<button>3</button>
+							<button>4</button>
+							<button>5</button>
+							<button>6</button>
+							<button>7</button>
+							<button>8</button>
+						</div>
 
 					</ul>
 				</div>
@@ -203,7 +203,8 @@
 			<ul class="nav menu">
 				<li><a href="pay.html"><em class="fa fa-dashboard">&nbsp;</em> 确认购票</a></li>
 				<li><a href="buy_card.html"><em class="fa fa-calendar">&nbsp;</em> 武汉通购买</a></li>
-				<li><a href="#" data-toggle="modal" data-target="#modal-recharge"><em class="fa fa-bar-chart">&nbsp;</em> 武汉通充值</a>
+				<li><a href="#" data-toggle="modal" data-target="#modal-recharge"><em
+							class="fa fa-bar-chart">&nbsp;</em> 武汉通充值</a>
 			</ul>
 
 
@@ -242,109 +243,142 @@
 		<!--/.row-->
 	</div>
 
-		<div class="modal fade" id="modal-recharge" tabindex="-1" role="dialog" aria-labelledby="modal-register-label" aria-hidden="true">
-				<div class="modal-dialog">
-					<div class="modal-content">
-						
-						<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal">
-								<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
-							</button>
-							<h3 class="modal-title" id="modal-register-label">武汉通充值</h3>
-		
-						</div>
-						
-		
-						<div class="modal-body">
-						<!-- 武汉通充值的表单部分 -->
-							<form role="form" action="" method="post" class="registration-form">
-								<div class="form-group">
-									<label for="form-card-number">卡号</label>
-									<input type="text" name="form-card-number" placeholder="8888888888" class="form-control" id="form-card-number">
-								</div>
-								<div class="form-group">
-									<label for="form-money-amount">金额</label>
-									<input type="text" name="form-money-amount" placeholder="100" class="form-last-name form-control" id="form-money-amount">
-								</div>
-								<div align="center">
-									<button type="submit" class="btn btn-md btn-primary">确定</button>
-								</div>
-							</form>
-						</div>
-						
-					</div>
+	<div class="modal fade" id="modal-recharge" tabindex="-1" role="dialog" aria-labelledby="modal-register-label"
+		aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">
+						<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+					</button>
+					<h3 class="modal-title" id="modal-register-label">武汉通充值</h3>
+
 				</div>
+
+
+				<div class="modal-body">
+					<!-- 武汉通充值的表单部分 -->
+					<form role="form" action="" method="post" class="registration-form">
+						<div class="form-group">
+							<label for="form-card-number">卡号</label>
+							<input type="text" name="form-card-number" placeholder="8888888888" class="form-control"
+								id="form-card-number">
+						</div>
+						<div class="form-group">
+							<label for="form-money-amount">金额</label>
+							<input type="text" name="form-money-amount" placeholder="100"
+								class="form-last-name form-control" id="form-money-amount">
+						</div>
+						<div align="center">
+							<button type="submit" class="btn btn-md btn-primary">确定</button>
+						</div>
+					</form>
+				</div>
+
 			</div>
+		</div>
+	</div>
 
-		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-		<script src="https://unpkg.com/vue2-leaflet"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+	<script src="https://unpkg.com/vue2-leaflet"></script>
 
-		<script src="js/box.js"></script>
-		<script src="js/jquery-1.11.1.min.js"></script>
-    	<script src="js/bootstrap.min.js"></script>
-		<script>
-			L.Icon.Default.mergeOptions({
-				iconUrl: 'images/marker.svg',
-				iconRetinaUrl: 'images/marker.svg',
-				shadowUrl: 'images/marker.svg',
-				// iconSize: [38, 95],
-				// shadowSize: [50, 64],
-				// point of the icon which will correspond to marker's location
-				iconAnchor: [0, -1],
-				// shadowAnchor: [4, 62],
-				// point from which the popup should open relative to the iconAnchor
-				popupAnchor: [0, -5],
-			});
-			let mapApp = new Vue({
-				el: '#map-app',
-				data() {
-					return {
-						zoom: -1,
-						minZoom: -1,
-						maxZoom: -1,
-						center: L.latLng(825, 1275),
-						url: 'images/line_UI_png/line2.png',
-						bounds: [[0, 0], [1650, 2550]],
-						crs: L.CRS.Simple,
-						markers: [
-							{ name: 'orig', lng: 0, lat: 0 },
-							
-						]
-					};
+	<script src="js/box.js"></script>
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script>
+		L.Icon.Default.mergeOptions({
+			iconUrl: 'images/marker.svg',
+			iconRetinaUrl: 'images/marker.svg',
+			shadowUrl: 'images/marker.svg',
+			iconAnchor: [0, 0],
+			popupAnchor: [0, 0],
+		});
+		let mapApp = new Vue({
+			el: '#map-app',
+			data() {
+				return {
+					zoom: -1,
+					minZoom: -1,
+					maxZoom: -1,
+					center: L.latLng(825, 1275),
+					url: 'images/line_UI_png/line2.png',
+					bounds: [[0, 0], [1650, 2550]],
+					crs: L.CRS.Simple,
+					markers: [
+						{ "name": "华中科技大学", "lng": 2118.0, "lat": 367.5 },
+						{ "name": "光谷大道", "lng": 1918.5, "lat": 367.5 },
+						{ "name": "金融港北", "lng": 976.5, "lat": 367.5 },
+						{ "name": "秀湖", "lng": 757.5, "lat": 367.5 },
+						{ "name": "佳园路", "lng": 1693.5, "lat": 372.0 },
+						{ "name": "黄龙山路", "lng": 1210.5, "lat": 372.0 },
+						{ "name": "藏龙东街", "lng": 538.5, "lat": 372.0 },
+						{ "name": "佛祖岭", "lng": 349.5, "lat": 372.0 },
+						{ "name": "光谷火车站", "lng": 1449.0, "lat": 366.0 },
+						{ "name": "珞雄路", "lng": 2296.5, "lat": 562.5 },
+						{ "name": "光谷广场", "lng": 2118.0, "lat": 756.0 },
+						{ "name": "虎泉", "lng": 1708.5, "lat": 756.0 },
+						{ "name": "广埠屯", "lng": 1456.5, "lat": 756.0 },
+						{ "name": "街道口", "lng": 1210.5, "lat": 756.0 },
+						{ "name": "宝通寺", "lng": 979.5, "lat": 756.0 },
+						{ "name": "小龟山", "lng": 342.0, "lat": 756.0 },
+						{ "name": "杨家湾", "lng": 1918.5, "lat": 757.5 },
+						{ "name": "中南路", "lng": 750.0, "lat": 756.0 },
+						{ "name": "洪山广场", "lng": 528.0, "lat": 756.0 },
+						{ "name": "螃蟹岬", "lng": 169.5, "lat": 943.5 },
+						{ "name": "汉口火车站", "lng": 2118.0, "lat": 1117.5 },
+						{ "name": "青年路", "lng": 1347.0, "lat": 1117.5 },
+						{ "name": "中山公园", "lng": 1102.5, "lat": 1117.5 },
+						{ "name": "积玉桥", "lng": 346.5, "lat": 1117.5 },
+						{ "name": "范湖", "lng": 1866.0, "lat": 1117.5 },
+						{ "name": "王家墩东", "lng": 1599.0, "lat": 1117.5 },
+						{ "name": "循礼门", "lng": 840.0, "lat": 1117.5 },
+						{ "name": "江汉路", "lng": 583.5, "lat": 1117.5 },
+						{ "name": "长港路", "lng": 2313.0, "lat": 1317.0 },
+						{ "name": "金银潭", "lng": 1918.5, "lat": 1501.5 },
+						{ "name": "常青城", "lng": 1693.5, "lat": 1501.5 },
+						{ "name": "盘龙城", "lng": 1210.5, "lat": 1501.5 },
+						{ "name": "巨龙大道", "lng": 979.5, "lat": 1501.5 },
+						{ "name": "宋家岗", "lng": 757.5, "lat": 1501.5 },
+						{ "name": "航空总部", "lng": 553.5, "lat": 1501.5 },
+						{ "name": "天河机场", "lng": 349.5, "lat": 1501.5 },
+						{ "name": "常青花园", "lng": 2137.5, "lat": 1501.5 },
+					]
+				};
+			},
+			methods: {
+				setAsDepature(name) {
+					document.getElementById('form-text-depature').value = name;
 				},
-				methods: {
-					setAsDepature(name) {
-						document.getElementById('form-text-depature').value = name;
-					},
-					setAsDestination(name) {
-						document.getElementById('form-text-destination').value = name;
-					},
+				setAsDestination(name) {
+					document.getElementById('form-text-destination').value = name;
+				},
 
-				},
-				components: {
-					'l-map': window.Vue2Leaflet.LMap,
-					'l-image-overlay': window.Vue2Leaflet.LImageOverlay,
-					'l-marker': window.Vue2Leaflet.LMarker,
-					'l-popup': window.Vue2Leaflet.LPopup,
-				},
-				mounted() {
-					this.$nextTick(() => {
-						const map = this.$refs.metroMap.mapObject;
-						map.setMaxBounds(this.$data.bounds);
-					})
-				}
-			})
-		</script>
-		<style>
-			#map-app {
-				position: relative;
-				/* border: 1px solid black; */
-				border-radius: 8px;
-				height: 100%;
-				width: 100%;
+			},
+			components: {
+				'l-map': window.Vue2Leaflet.LMap,
+				'l-image-overlay': window.Vue2Leaflet.LImageOverlay,
+				'l-marker': window.Vue2Leaflet.LMarker,
+				'l-popup': window.Vue2Leaflet.LPopup,
+			},
+			mounted() {
+				this.$nextTick(() => {
+					const map = this.$refs.metroMap.mapObject;
+					map.setMaxBounds(this.$data.bounds);
+				})
 			}
-		</style>
+		})
+	</script>
+	<style>
+		#map-app {
+			position: relative;
+			/* border: 1px solid black; */
+			border-radius: 8px;
+			height: 100%;
+			width: 100%;
+		}
+	</style>
 
 
 </body>
