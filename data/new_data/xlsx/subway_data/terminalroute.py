@@ -47,6 +47,6 @@ terminal_num = 198
 
 for i in range(terminal_num * terminal_num):
     sheet.cell(i + 2, 6).value = convertTerminal(str(sheet.cell(i + 2, 6).value))
-~
+    
 print('finished!')
 wb.save(filePath)
