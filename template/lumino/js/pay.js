@@ -67,6 +67,9 @@ function success(text) {
     price.innerHTML = single_price * ticket_num;
     var time = document.getElementById("time");
     time.innerHTML = result.results[0].time;
+    
+    //渲染起点到终点的画线
+    $(".subway-map").subwayMap({ debug: true });
 }
 
 var request = new XMLHttpRequest(); // 新建XMLHttpRequest对象
