@@ -32,14 +32,14 @@
 
 
       <!--sidebar-->
-      <div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
+        <div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
             <!--login-->
             <div class="profile-sidebar">
                 <div class="profile-userpic">
-                    <img src="http://placehold.it/50/30a5ff/fff" class="img-responsive" alt="">
+                    <img src="images/github.png" class="img-responsive" alt="">
                 </div>
                 <div class="profile-usertitle">
-                    <div class="profile-usertitle-name">管理员/乘客</div>
+                    <div class="profile-usertitle-name">热干面</div>
                     <div class="profile-usertitle-status"><span class="indicator label-success"></span>Online</div>
                 </div>
                 <div class="clear"></div>
@@ -158,13 +158,13 @@
             </div>
                    
             <ul class="nav menu">
-                <li><a href="index.html"><em class="fa fa-dashboard">&nbsp;</em> 确认购买</a></li>
+                <li><a href="#" data-toggle="modal" data-target="#modal-buycard"><em class="fa fa-bar-chart">&nbsp;</em>确认购买</a>
+                <!--<li><a href="index.html"><em class="fa fa-dashboard">&nbsp;</em> 确认购买</a></li>-->
                 <li><a href="recharge_card.html"><em class="fa fa-calendar">&nbsp;</em> 武汉通充值</a></li>
                 <li><a href="index.html"><em class="fa fa-bar-chart">&nbsp;</em> 购票</a></li>
             </ul>
-    
-    
         </div><!--/.sidebar-->
+
 
     <!--banner-->
     <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
@@ -332,15 +332,45 @@
                                 <p>销售类卡:该卡购卡时费用为工本费, 无法退卡.普通销售卡工本费20元, 纪念卡工本费30元起.</p>
                                 <p>若武汉通卡片损坏, 卡内余额信息无法读出, 需通过武汉通后台数据库卡帐户中读取.因为武汉通的刷卡消费是脱机进行的, 不同于银行刷卡的联机交易, 消费数据和余额不能实时传送, 所有消费数据必须经过采集、清算无误、系统核实后才能确定卡内余额, 一般周期需要7天.不便之处敬请谅解.</p>
                             </div>
-                        </div>
+                    </div>
                     
                 </div>           
             </div><!-- /.row -->
 
             
-            
+    <!--box modal-->
+    <div class="modal fade" id="modal-buycard" tabindex="-1" role="dialog" aria-labelledby="modal-register-label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                    </button>
+                    <h3 class="modal-title" id="modal-register-label">支付</h3>
 
-        </div><!--/.main-->
+                </div>
+                
+
+                <div class="modal-body">
+                    <div style="overflow: hidden;">
+                        <div class="col-md-6"><img src="images/alipay.png" width="100%" ></div>
+                        <div class="col-md-6"><img src="images/weixin.png" width="100%"></div>
+                    </div>
+                    <div align="center" style="margin-top: 20px">
+                        <a href="index.html">
+                        <button type="button" class="btn btn-md btn-primary" >
+                            确认支付
+                        </button>
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>        
+
+    
         
         <script src="js/jquery-1.11.1.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
@@ -350,7 +380,7 @@
         <script src="js/easypiechart-data.js"></script>
         <script src="js/bootstrap-datepicker.js"></script>
         <script src="js/custom.js"></script>
-	
+	    <script src="js/box.js"></script>
 		
 </body>
 </html>
