@@ -9,7 +9,6 @@
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/datepicker3.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
-    <link href="css/modal.css" rel="stylesheet">
 
     <!--Custom Font-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i"
@@ -18,6 +17,8 @@
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
     <![endif]-->
+   
+
 </head>
 
 <body>
@@ -82,52 +83,35 @@
 
 
         <div class="row">
-            <div class="col-lg-12">
+            <div class="col-md-12">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
                         线路详情
                         <span class="pull-right clickable panel-toggle"><em class="fa fa-toggle-up"></em></span>
                     </div>
+                    <div class="panel-body canvas-wrapper">
+                        <div class ="subway-map"  data-columns="30" data-rows="4" data-cellSize="40" data-legendId="legend" data-textClass="text" data-gridNumbers="true" data-grid="false" data-lineWidth="8">
+                            <ul data-color="#36AEFF" data-label="jQuery Widgets" id = "subway-ul">          
+                               
+                            </ul>
 
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-default">
                     <div class="panel-body">
-
-                        <div class="col-md-12" style="margin-top: 2em;margin-bottom: -3em;align-items: center;">
-                            <div class="col-md-5" style="text-align: center;">
-                                <h4><b>2号线</b></h4>
-                            </div>
-                            <div class="col-md-2" style="text-align: center;">
-                                <h4><b>4号线</b></h4>
-                            </div>
-                            <div class="col-md-5" style="text-align: center;">
-                                <h4><b>3号线</b></h4>
-                            </div>
-                        </div>
-
-                        <div class="canvas-wrapper">
-                            <canvas class="main-chart" id="line-chart" height="100" width="800"></canvas>
-                        </div>
-
-                        <div class="col-md-12" style="margin-top: -4em;margin-bottom: 2em;align-items: center;">
-                            <div class="col-md-3" style="text-align: center;">
-                                <h4><b>街道口</b></h4>
-                            </div>
-                            <div class="col-md-3" style="text-align: center;">
-                                <h4><b>中南路</b></h4>
-                            </div>
-                            <div class="col-md-3" style="text-align: center;">
-                                <h4><b>王家湾</b></h4>
-                            </div>
-                            <div class="col-md-3" style="text-align: center;">
-                                <h4><b>体育中心</b></h4>
-                            </div>
-                        </div>
-
                         <div class="col-md-12" style="margin-top: 3em;">
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label class="col-md-4 control-label" for="name">购票数量</label>
                                     <div class="col-md-6">
-                                        <output id="amount" name="amount" type="text" placeholder="Your name"
+                                        <output id="ticket-amount" name="amount" type="text" placeholder="Your name"
                                             class="form-control">
                                     </div>
                                 </div>
@@ -136,7 +120,7 @@
                                 <div class="form-group">
                                     <label class="col-md-4 control-label" for="name">应付金额</label>
                                     <div class="col-md-6">
-                                        <output id="amount" name="amount" type="text" placeholder="Your name"
+                                        <output id="price" name="amount" type="text" placeholder="Your name"
                                             class="form-control">
                                     </div>
                                 </div>
@@ -152,21 +136,12 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="panel panel-default">
-                    <div class="panel-body">
-                        <div align="center">
-                            <!-- <button class="btn btn-md btn-primary" data-modal-id="modal-register">扫码支付</button>-->
-                            <a class="btn btn-md btn-primary" href="#" data-toggle="modal" data-target="#modal-register">扫码支付</a> 
+                        <div class="col-md-12" style="margin-top: 2em;">
+                            <div align="center">
+                                <!-- <button class="btn btn-md btn-primary" data-modal-id="modal-register">扫码支付</button>-->
+                                <a class="btn btn-md btn-primary" href="#" data-toggle="modal" data-target="#modal-register">扫码支付</a> 
+                            </div>
                         </div>
-
                     </div>
                 </div>
                 <!--/.panel-->
@@ -193,29 +168,7 @@
                 
 
                 <div class="modal-body">
-                    
-                    <!-- <form role="form" action="" method="post" class="registration-form">
-                        <div class="form-group">
-                            <label class="sr-only" for="form-first-name">First name</label>
-                            <input type="text" name="form-first-name" placeholder="First name..." class="form-first-name form-control" id="form-first-name">
-                        </div>
-                        <div class="form-group">
-                            <label class="sr-only" for="form-last-name">Last name</label>
-                            <input type="text" name="form-last-name" placeholder="Last name..." class="form-last-name form-control" id="form-last-name">
-                        </div>
-                        <div class="form-group">
-                            <label class="sr-only" for="form-email">Email</label>
-                            <input type="text" name="form-email" placeholder="Email..." class="form-email form-control" id="form-email">
-                        </div>
-                        <div class="form-group">
-                            <label class="sr-only" for="form-about-yourself">About yourself</label>
-                            <textarea name="form-about-yourself" placeholder="About yourself..." 
-                                        class="form-about-yourself form-control" id="form-about-yourself"></textarea>
-                        </div>
-                        <button type="submit" class="btn">Sign me up!</button>
-                    </form> -->
-                    <!-- <img src="images/alipay.png" width="100%" >
-                    <img src="images/alipay.png" width="100%" > -->
+                
                     <div style="overflow: hidden;">
                         <div class="col-md-6"><img src="images/alipay.png" width="100%" ></div>
                         <div class="col-md-6"><img src="images/weixin.png" width="100%"></div>
@@ -225,29 +178,99 @@
             </div>
         </div>
     </div>
+    <script>
+        function add_li(station_index, text, station_num, interchange)
+        {
+            var ul = document.getElementById("subway-ul");
+            var x_coord = 14;
+            if(station_num/2 == 0) //两两对称
+            {
+                x_coord = 12;
+                var x_offset = (station_index - (station_num/2 - 1))*6;
+                x_coord = x_coord + x_offset; 
+            }
+            else{
+                var x_offset = (station_index - (station_num -1)/2)*6;
+                x_coord = x_coord + x_offset; 
+            }
+            //添加 li
+            var li = document.createElement("li");
+        　　 //设置 li 属性，如 id
+            li.setAttribute("data-coords", x_coord + ",2");
+            li.innerHTML = text;
+            if(interchange == 1)
+                li.setAttribute("data-marker", "interchange")
+            ul.appendChild(li);
+        }
+        var storage=window.localStorage;
+        var result = {
+            "count": 1,
+            "next": null,
+            "previous": null,
+            "results": [
+                {
+                    "begin": "街道口",
+                    "end": "武汉火车站",
+                    "distance": "66.66",
+                    "route": "街道口 2号线 中南路 4号线 武汉火车站 5号线 武汉站",
+                    "price": "5",
+                    "time": "55"
+                }
+            ]
+        };
+        var route = result.results[0].route;
+        var stations_temp = route.split(" ");
+        var stations = new Array();
+        var interchange = new Array();
+        for(var i = 1; i < stations_temp.length; i++)
+        {
+            var station = stations_temp[i];
+            console.log(station);
+            console.log(station.charAt(0));
+            if(station.charAt(0) <= '9' && station.charAt(0) >= '0') //一条线, 表示前一个站是中转站
+            {
+                
+                var new_station = stations_temp[i-1].concat("(").concat(station).concat(")");
+                stations.push(new_station);
+                
+            }
+        }
+        stations.push(stations_temp[stations_temp.length-1]);
+    
+        
+        for(var i = 0; i < stations.length; i++)
+        {
+            if(i == 0 || i == stations.length - 1)
+                add_li(i, stations[i],stations.length,1);
+            else
+                add_li(i, stations[i],stations.length,0);
+        }
 
-    <!-- <script src="js/bootstrap.min.js"></script> -->
+
+
+        var ticket = document.getElementById("ticket-amount");
+        ticket.innerHTML = storage.getItem("ticket-num");
+        var price = document.getElementById("price");
+        price.innerHTML = storage.getItem("destination");
+        var time = document.getElementById("time");
+        time.innerHTML = storage.getItem("depature");
+        
+
+
+    </script>
     <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/jquery.cookie.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/easypiechart.js"></script>
     <script src="js/easypiechart-data.js"></script>
     <script src="js/bootstrap-datepicker.js"></script>
     <script src="js/custom.js"></script>
-    <script src="js/box.js"></script>
-    <script src="js/pay_drawline.js"></script>
-    <script src="js/pay_drawline_data.js"></script>
-    <!-- <script src="js/pay_modal.js"></script> -->
-    <script>
-        window.onload = function () {
-            var chart1 = document.getElementById("line-chart").getContext("2d");
-            window.myLine = new Chart(chart1).Line(lineChartData, {
-                responsive: true,
-                scaleLineColor: "rgba(0,0,0,0)",
-                scaleGridLineColor: "rgba(0,0,0,0)",
-                //scaleFontColor: "#c5c7cc"
-                scaleFontColor: "#FFF"
-            });
-        };
+    <script src ="js/jquery.subwayMap-0.5.3.js"></script>
+  
+    <script type="text/javascript">
+        $(".subway-map").subwayMap({ debug: true });
     </script>
 
 </body>

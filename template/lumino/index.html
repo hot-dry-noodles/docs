@@ -262,14 +262,14 @@
 					</div>
 
 					<div class="d2">
-						<button >1</button>	
-					    <button >2</button>	
-				        <button >3</button>	
-				        <button >4</button>	
-					   <button >5</button>	   
-					   <button >6</button>	   
-					   <button >7</button>	   
-					   <button >8</button>	
+						<button onclick="setTicketNum(1)">1</button>	
+					    <button onclick="setTicketNum(2)">2</button>	
+				        <button onclick="setTicketNum(3)">3</button>	
+				        <button onclick="setTicketNum(4)">4</button>	
+					   <button onclick="setTicketNum(5)">5</button>	   
+					   <button onclick="setTicketNum(6)">6</button>	   
+					   <button onclick="setTicketNum(7)">7</button>	   
+					   <button onclick="setTicketNum(8)">8</button>	
 					</div>
 
 					</ul>
@@ -360,8 +360,15 @@
 
 		<script src="js/box.js"></script>
 		<script src="js/jquery-1.11.1.min.js"></script>
-    	<script src="js/bootstrap.min.js"></script>
+		<script src="js/jquery.cookie.js"></script>
+		<script src="js/bootstrap.min.js"></script>
 		<script>
+			function setTicketNum(x)
+			{
+				var storage=window.localStorage;
+				storage.setItem("ticket-num",x);
+			}
+			window.onload = setTicketNum(1);
 			L.Icon.Default.mergeOptions({
 				iconUrl: 'images/marker.svg',
 				iconRetinaUrl: 'images/marker.svg',
@@ -596,9 +603,13 @@
 				methods: {
 					setAsDepature(name) {
 						document.getElementById('form-text-depature').value = name;
+						var storage=window.localStorage;
+						storage.setItem("depature",name);
 					},
 					setAsDestination(name) {
 						document.getElementById('form-text-destination').value = name;
+						var storage=window.localStorage;
+						storage.setItem("destination",name);
 					},
 
 				},
